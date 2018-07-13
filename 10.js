@@ -15,6 +15,5 @@ function myFx() {
     i = 2;
   }
   console.log("The sum of all primes below", max, "is:", sum);
-  console.timeEnd("myFx");
 }
 myFx();

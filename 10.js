@@ -1,26 +1,20 @@
 function myFx() {
-  let primeArray = [2];
-  var factor = 3;
-  var i = 2;
-  let max = 10;
+  let sum = 2;
+  let factor = 3;
+  let i = 2;
+  let max = 100;
   while (factor < max) {
     while (factor % i !== 0) {
       i++;
-      if (i === factor) {
-        primeArray.push(factor);
+      if (i == factor) {
+        sum = sum + factor;
         break;
       }
     }
     factor++;
     i = 2;
   }
-  const reducer = (n1, n2) => n1 + n2;
-  console.log("The number of primes below", max, "is:", primeArray.length);
-  console.log(
-    "The sum of all primes below",
-    max,
-    "is:",
-    primeArray.reduce(reducer)
-  );
+  console.log("The sum of all primes below", max, "is:", sum);
+  console.timeEnd("myFx");
 }
 myFx();
